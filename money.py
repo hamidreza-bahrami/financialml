@@ -153,8 +153,6 @@ def show_page():
         if y == 1:
             text1 = 'بر اساس تحلیل من ، کسب و کار اینترنتی شما در حال پسرفت است'
             text2 = 'ادامه ی روند به شکل بالا ، موجب از دست دادن مشتریان و کاهش درآمد شما خواهد شد'
-            text3 = 'Based on my analysis, you have got Flu'
-            text4 = 'Please visit a doctor as soon as possible'
             def stream_data1():
                 for word in text1.split(" "):
                     yield word + " "
@@ -165,16 +163,6 @@ def show_page():
                     yield word + " "
                     time.sleep(0.09)
             st.write_stream(stream_data2)
-            def stream_data3():
-                for word in text3.split(" "):
-                    yield word + " "
-                    time.sleep(0.09)
-            st.write_stream(stream_data3)
-            def stream_data4():
-                for word in text4.split(" "):
-                    yield word + " "
-                    time.sleep(0.09)
-            st.write_stream(stream_data4)
 
         elif y == 0:
             text1 = 'بر اساس تحلیل من ، کسب و کار اینترنتی شما در وضعیت مناسبی بوده و جای نگرانی نیست'
